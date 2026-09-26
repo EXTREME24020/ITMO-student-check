@@ -13,4 +13,7 @@ def check_itmo_student(message): # главная функция
         else:
             bot.reply_to(message, "Это не студент ИТМО") # иначе отвечаем отрицательно
 
+    except Exception as e: # обработка возможной ошибки
+        bot.reply_to(message, f"Ошибка {e}") # вывод возможной ошикби
+
 bot.polling(none_stop=True) # запуск бота
